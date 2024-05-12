@@ -12,3 +12,71 @@ h1:hover {
     transition: 0.4s;
   }
   
+  .container {
+    display: flex;
+    align-items: center;
+}
+.left {
+    flex: 1;
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+
+.item{
+    background-color: #2E2E2E;
+    margin-top:8px;
+    padding:3px;
+    margin-bottom: 8px;
+    width: 525px;
+    display: flex;
+    align-items: center;
+    /* text-align: left; */
+    /* display:flex; */
+}
+
+span{
+    padding-left:8px;
+}
+
+.button {
+    background-color:rgba(255, 0, 0, 0);
+    height: 50px;
+    border-radius: 50%;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+    gap: 2px;
+  }
+  
+  .svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .button:hover {
+    transition-duration: 0.3s;
+    align-items: center;
+    gap: 0;
+    border-color: #fc466a00;
+  }
+  
+  .bin-top {
+    transform-origin: bottom right;
+  }
+  .button:hover .bin-top {
+    transition-duration: 0.5s;
+    transform: rotate(160deg);
+  }
+  
