@@ -6,6 +6,12 @@ import "./Home.css";
 const Home = () => {
   const [todos, setTodos] = useState([]);
 
+  const handleDelete = (id) => {
+    axios.delete("http://localhost:3000/delete/"+id)
+    .then(result => { location.reload()})
+    .catch(error => console.log(error))
+  }
+
   useEffect(() => {
     axios
       .get("http://localhost:3000/get")
@@ -18,7 +24,7 @@ const Home = () => {
       <h1> Todo List </h1>
       <Create />
       {todos.length == 0 ? (
-        <div>No Record</div>
+        <div><br/>No Record</div>
       ) : (
         todos.map((todo) => (
           <div className="container item">
@@ -29,7 +35,7 @@ const Home = () => {
             </div>
             <div className="right">
               {/* <p>ola</p> */}
-              <button class="button">
+              <button class="button" onClick={() => handleDelete(todo._id)}>
     <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

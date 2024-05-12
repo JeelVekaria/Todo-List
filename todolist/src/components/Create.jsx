@@ -9,12 +9,13 @@ const Create = () => {
       .post("http://localhost:3000/add", { task })
       .then((result) => {
         console.log(result)
+        location.reload()
       })
       .catch((error) => {
         console.log(error)
       })
   }
-  
+
   return (
     <>
       <div class="input-group">

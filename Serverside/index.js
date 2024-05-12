@@ -32,6 +32,13 @@ app.post("/add", (req, res) => {
     .catch((error) => console.log("fel"))
 })
 
+app.delete("/delete/:id", (req, res) => {
+    const {id} = req.params;
+    todoCollection.findByIdAndDelete({_id: id})
+    .then(result => res.json(result))
+    .catch(err => res.json(err))
+})
+
 app.listen(3000,() => {
     console.log("Server is running")
 })
