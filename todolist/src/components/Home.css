@@ -1,0 +1,14 @@
+h1{
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #FC466B 0%, #516bef 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.3s;
+}
+
+h1:hover {
+    letter-spacing: 2px;
+    transition: 0.4s;
+  }
+  
